@@ -1,0 +1,7 @@
+{
+  "city": "Code City",
+  "version": "0.1.0",
+  "architecture": "modular-microservice-mesh",
+  "runtime": "python3 / termux / node",
+  "status": "bootstrapped"
+}
