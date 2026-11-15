@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""
+cityctl — Code City master control plane CLI.
+Usage: python3 cityctl [status|spawn|dispatch|registry]
+"""
+
+import sys
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+
+def cmd_status():
+    print("[*] Code City Status Check:")
+    spec_path = ROOT / "manifests" / "city_spec.json"
+    registry_path = ROOT / "logs" / "registry.json"
+    
+    if spec_path.exists():
+        spec = json.loads(spec_path.read_text())
+        print(f"  City: {spec.get('city')} ({spec.get('version')})")
+    
+    if registry_path.exists():
+        reg = json.loads(registry_path.read_text())
+        print(f"  Registered Nodes: {list(reg.keys())}")
+    else:
+        print("  Registered Nodes: None (run registry bootstrap)")
+
+def cmd_spawn():
+    import engine.spawner as spawner
+    spawner.main()
+
+def cmd_registry():
+    import core.registry as reg
+    reg.register_node("cityctl-node", "core", 8082)
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 cityctl [status|spawn|registry]")
+        sys.exit(1)
+        
+    cmd = sys.argv[1]
+    if cmd == "status":
+        cmd_status()
+    elif cmd == "spawn":
+        cmd_spawn()
+    elif cmd == "registry":
+        cmd_registry()
+    else:
+        print(f"[-] Unknown command: {cmd}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,2 @@
+{"timestamp": 1794714006.3805904, "sender": "gateway-node", "recipient": "scout-runner", "topic": "trigger_scan", "payload": {"target": "market_signals"}}
+{"timestamp": 1794714547.9149225, "sender": "gateway-node", "recipient": "scout-runner", "topic": "trigger_scan", "payload": {"target": "market_signals", "priority": "high"}}

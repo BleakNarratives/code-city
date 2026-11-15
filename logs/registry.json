@@ -1,0 +1,20 @@
+{
+  "gateway-node": {
+    "district": "core",
+    "port": 8080,
+    "status": "active",
+    "last_seen": 1794713963.6832526
+  },
+  "scout-runner": {
+    "district": "engine",
+    "port": 8081,
+    "status": "active",
+    "last_seen": 1794713963.6839037
+  },
+  "cityctl-node": {
+    "district": "core",
+    "port": 8082,
+    "status": "active",
+    "last_seen": 1794714450.758244
+  }
+}
