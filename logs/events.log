@@ -1,2 +1,9 @@
 {"timestamp": 1794714006.3805904, "sender": "gateway-node", "recipient": "scout-runner", "topic": "trigger_scan", "payload": {"target": "market_signals"}}
 {"timestamp": 1794714547.9149225, "sender": "gateway-node", "recipient": "scout-runner", "topic": "trigger_scan", "payload": {"target": "market_signals", "priority": "high"}}
+{"timestamp": 1794715220.2574332, "sender": "cityctl-cli", "recipient": "scout-runner", "topic": "live_sync", "payload": {"action": "execute", "priority": "normal"}}
+{"timestamp": 1794715747.6501465, "sender": "cityctl-cli", "recipient": "worker-daemon", "topic": "run_command", "payload": {"cmd": "git status && uname -a"}}
+{"timestamp": 1794715747.677337, "sender": "cityctl-cli", "recipient": "worker-daemon", "topic": "generate_file", "payload": {"filename": "status_report.md", "content": "# Code City Auto-Report\n\nWorkers are active and executing tasks.\n"}}
+{"timestamp": 1794715785.4349174, "sender": "cityctl-cli", "recipient": "worker-daemon", "topic": "run_command", "payload": {"cmd": "git status && uname -a"}}
+{"timestamp": 1794715785.4669545, "sender": "cityctl-cli", "recipient": "worker-daemon", "topic": "generate_file", "payload": {"filename": "status_report.md", "content": "# Code City Auto-Report\n\nWorkers are active and executing tasks.\n"}}
+{"timestamp": 1794716048.6055326, "sender": "cityctl-cli", "recipient": "worker-daemon", "topic": "run_command", "payload": {"cmd": "date && uname -r"}}
+{"timestamp": 1794716048.6531384, "sender": "cityctl-cli", "recipient": "worker-daemon", "topic": "generate_file", "payload": {"filename": "status_report.md", "content": "# Code City Operational Report\n\nWorkers are live and executing tasks.\n"}}
